@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(new MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,21 +10,28 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Aplikasi Belajar"),
+          title: Text("Belajar Flutter",
+              style: TextStyle(
+                color: Color.fromARGB(181, 0, 50, 32),
+                fontSize: 24,
+              )),
         ),
         body: Center(
-            child: Container(
-                color: Colors.lightBlue,
-                width: 150,
-                height: 120,
-                child: Text(
-                  "Saya Sedang Melatih Belajar Kemampuan flutter Saya",
-                  style: TextStyle(
-                      color: Color.fromARGB(195, 10, 11, 12),
-                      fontStyle: FontStyle.italic,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 20),
-                ))),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset('assets/flutter_image.png'),
+              SizedBox(height: 20),
+              Text(
+                'Belajar Flutter',
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Color.fromARGB(255, 0, 100, 0), // Hijau Tua
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
