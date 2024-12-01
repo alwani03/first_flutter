@@ -1,41 +1,19 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'; 
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  String message = "This a text";
-
-  void touchMe() {}
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Anonymous Method"),
+          title: Text("Latihan Text Style"),
         ),
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(message),
-              ElevatedButton(
-                child: Text("Touch Me"),
-                onPressed: () {
-                  setState(() {
-                    message = "button can touchs";
-                  });
-                },
-              )
-            ],
-          ),
+          child: Text("Ini Adalah Text",style: TextStyle(fontFamily: "Roboto"),),
         ),
       ),
     );
